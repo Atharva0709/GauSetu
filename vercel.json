@@ -19,8 +19,16 @@
       "destination": "/backend/api/index.js"
     },
     {
+      "source": "/(.*)\\.(css|js|png|jpg|svg|ico|json)",
+      "destination": "/gausetu-connect-main/$1.$2"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/gausetu-connect-main/assets/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/gausetu-connect-main/$1"
+      "destination": "/gausetu-connect-main/index.html"
     }
   ]
 }
