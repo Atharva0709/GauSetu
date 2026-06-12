@@ -9,7 +9,7 @@ const path = require('path');
 
 // Initialize database on startup
 const initializeDatabase = () => {
-  const dbPath = path.join(__dirname, '../database/livestock.db');
+  const dbPath = process.env.VERCEL ? '/tmp/livestock.db' : path.join(__dirname, '../database/livestock.db');
   const dbExists = fs.existsSync(dbPath);
   
   if (!dbExists) {
